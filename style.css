@@ -3,6 +3,8 @@
   --font:"Raleway", sans-serif;
   --text-color:"black";
   --first-color:lightblue;
+  --personal-info-color: #003147;
+  --general-info-color: #fff;
 }
 
 /**** Reset ****/
@@ -35,22 +37,22 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 h5 {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
 }
 
 h6 {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
 /**** Components ****/
@@ -61,8 +63,10 @@ h6 {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.2fr 2fr;
   grid-template-rows: 1fr auto;
   grid-template-areas: "personal-info  general-info"
                        "footer         footer";
@@ -71,19 +75,52 @@ h6 {
 .footer {
   grid-area: footer;
   padding: 1rem;
+  background-color: red;
+  text-align: center;
 }
 
 .general-info {
   grid-area: general-info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--general-info-color);
+}
+
+hr {
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .personal-info {
   grid-area: personal-info;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--personal-info-color);
 }
 
+.personal-info .profile {
+  text-align: center;
+}
 
+.profile h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
 
+ul {
+  list-style:none;
+  padding-left: 1rem;
+}
 
+ul li:not(:first-child) {
+  margin-top: 0.3rem;
+}
 
-
-
+.personal-info div:last-child ul {
+  margin-bottom: 0;
+}
