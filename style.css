@@ -1,11 +1,11 @@
 /**** Custom Properties ****/
 :root {
-  --font:"Raleway", sans-serif;
-  --text-color:"black";
-  --first-color:lightblue;
-  --personal-info-color: #003147;
-  --general-info-color: #fff;
-  --border-bottom: 1px solid rgba(255,255,255,0.2);
+  --font:"Poppins", sans-serif;
+  --lightblue:lightblue;
+  --white: #fff;
+  --dark-blue: #003147;
+  --shiny-blue: #03a9f4;
+  --grey: 1px solid rgba(255,255,255,0.2);
 }
 
 /**** Reset ****/
@@ -23,7 +23,7 @@ html {
 
 body {
   color: var(--text-color);
-  background-color: var(--first-color);
+  background-color: var(--lightblue);
 }
 
 h1 {
@@ -56,6 +56,11 @@ h6 {
   font-size: 0.5rem;
 }
 
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /**** Components ****/
 .circle-image {
   width: 200px;
@@ -78,10 +83,15 @@ h6 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: 1.2fr 2fr;
+  grid-template-columns: 1.1fr 2fr;
   grid-template-rows: 1fr auto;
   grid-template-areas: "personal-info  general-info"
                        "footer         footer";
+}
+
+.date {
+  font-size: 500;
+  color: var(--shiny-blue);
 }
 
 .footer {
@@ -97,17 +107,27 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--general-info-color);
+  background-color: var(--white);
+}
+
+.icon {
+  color: var(--shiny-blue);
+  width: 18px;
+}
+
+.idioma {
+  font-weight: 500;
 }
 
 .personal-info {
   grid-area: personal-info;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--personal-info-color);
+  align-items: center;
+  background-color: var(--dark-blue);
 }
 
 .personal-info .profile {
@@ -121,7 +141,7 @@ h6 {
 .personal-info > div {
   padding-bottom: 1rem;
   margin-top: 1rem;
-  border-bottom: var(--border-bottom);
+  border-bottom: var(--grey);
 } 
 
 .personal-info .languages{
@@ -138,7 +158,19 @@ ul {
   margin-bottom: 0;
 }
 
-ul li:not(:first-child) {
+.list-info li:not(:first-child) {
   margin-top: 0.3rem;
 }
+
+.text {
+  color: var(--white);
+  font-weight: 200;
+}
+
+.tittle {
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+
 
