@@ -57,7 +57,18 @@ h6 {
 }
 
 /**** Components ****/
+.circle-image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
 
+.circle-image img {
+  width: 100%;
+  height: auto;
+}
 /**** Utilities ****/
 
 .container {
@@ -100,6 +111,10 @@ h6 {
 }
 
 .personal-info .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
