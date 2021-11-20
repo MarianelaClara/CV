@@ -5,6 +5,7 @@
   --first-color:lightblue;
   --personal-info-color: #003147;
   --general-info-color: #fff;
+  --border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 /**** Reset ****/
@@ -88,15 +89,10 @@ h6 {
   background-color: var(--general-info-color);
 }
 
-hr {
-  width: 80%;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
 .personal-info {
   grid-area: personal-info;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,20 +103,27 @@ hr {
   text-align: center;
 }
 
+.personal-info > div {
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: var(--border-bottom);
+} 
+
+.personal-info .languages{
+  border-bottom: none;
+}
+
 .profile h3 {
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 ul {
-  list-style:none;
+  list-style: none;
   padding-left: 1rem;
+  margin-bottom: 0;
 }
 
 ul li:not(:first-child) {
   margin-top: 0.3rem;
 }
 
-.personal-info div:last-child ul {
-  margin-bottom: 0;
-}
