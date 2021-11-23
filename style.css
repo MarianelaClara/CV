@@ -6,6 +6,7 @@
   --dark-blue: #003147;
   --shiny-blue: #03a9f4;
   --grey: 1px solid rgba(255,255,255,0.2);
+  --bg-footer: #035880;
 }
 
 /**** Reset ****/
@@ -22,8 +23,8 @@ html {
 }
 
 body {
-  color: var(--text-color);
   background-color: var(--lightblue);
+  height: auto;
 }
 
 h1 {
@@ -78,41 +79,66 @@ p {
 
 .container {
   width: 90%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: 1.1fr 2fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "personal-info  general-info"
-                       "footer         footer";
+  grid-template-columns: 1fr ;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "personal-info"
+                       "general-info"
+                       "footer";
 }
 
 .date {
-  font-size: 500;
+  font-weight: 500;
   color: var(--shiny-blue);
 }
 
 .footer {
   grid-area: footer;
   padding: 1rem;
-  background-color: red;
+  background-color: var(--bg-footer);
   text-align: center;
+  color: var(--white);
 }
 
 .general-info {
+  padding: 2rem;
   grid-area: general-info;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--white);
 }
 
+.general-info p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.general-info .experience p {
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.general-info .experience{
+  margin-bottom: 1rem;
+}
+
+.general-info-tittle {
+  color: var(--dark-blue);
+  letter-spacing: 1px;
+}
+
 .icon {
   color: var(--shiny-blue);
-  width: 18px;
+  width: 20px;
 }
 
 .idioma {
@@ -173,4 +199,14 @@ ul {
   text-align: center;
 }
 
-
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 1.2fr 2fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "personal-info  general-info"
+                         "footer         footer";
+  }
+  .general-info p {
+    font-size: 1.2rem;
+  }
+}
