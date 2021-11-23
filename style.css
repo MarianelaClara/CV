@@ -138,7 +138,7 @@ p {
 
 .icon {
   color: var(--shiny-blue);
-  width: 20px;
+  width: 17px;
 }
 
 .idioma {
@@ -147,8 +147,8 @@ p {
 
 .personal-info {
   grid-area: personal-info;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
